@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Enhanced HTML5 Web Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+      h1,
+      h2 {
+        color: #333;
+      }
+      section {
+        margin-bottom: 40px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+      fieldset {
+        border: 1px solid #aaa;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      legend {
+        font-weight: bold;
+        padding: 0 5px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #0066cc;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #004999;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Enhanced HTML5 Page</h1>
+      <p>
+        This page demonstrates HTML5 features including lists, tables, media
+        content, and a validated form.
+      </p>
+    </header>
+
+    <main>
+      <!-- Section: Lists -->
+      <section>
+        <h2>My Learning Topics</h2>
+        <ol>
+          <li>HTML & CSS Basics</li>
+          <li>Responsive Web Design</li>
+          <li>JavaScript Programming</li>
+          <li>Form Validation Techniques</li>
+          <li>Media Embedding</li>
+        </ol>
+      </section>
+
+      <!-- Section: Table -->
+      <section>
+        <h2>Weekly Study Plan</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Topic</th>
+              <th>Duration (Hours)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>HTML & CSS</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>JavaScript</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>Projects / Practice</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Section: Media -->
+      <section>
+        <h2>Media Gallery</h2>
+
+        <h3>Sample Image</h3>
+        <img
+          src="https://images.pexels.com/photos/5935788/pexels-photo-5935788.jpeg"
+          alt="Placeholder Image"
+          width="400"
+          height="300"
+        />
+
+        <h3>Sample Audio</h3>
+        <audio controls>
+          <source
+            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+
+        <h3>Sample Video</h3>
+        <iframe
+          width="400"
+          height="300"
+          src="https://www.youtube.com/embed/salY_Sm6mv4"
+          frameborder="0"
+          allow="accelerometer;autoplay;clipboard-write; encrypted-media; gryscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </section>
+
+      <!-- Section: Form -->
+      <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+          <fieldset>
+            <legend>Personal Details</legend>
+
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Jane Doe"
+              minlength="2"
+            />
+
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="jane@example.com"
+            />
+
+            <label for="phone">Phone Number (Format: 123-456-7890):</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              pattern="\d{3}-\d{3}-\d{4}"
+              placeholder="123-456-7890"
+            />
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required />
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferences</legend>
+
+            <label for="language">Preferred Language:</label>
+            <select id="language" name="language" required>
+              <option value="">--Select--</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="js">JavaScript</option>
+              <option value="python">Python</option>
+            </select>
+
+            <label for="experience">Years of Experience:</label>
+            <input
+              type="number"
+              id="experience"
+              name="experience"
+              min="0"
+              max="50"
+              placeholder="0"
+              required
+            />
+
+            <label>Receive Newsletter:</label>
+            <input
+              type="radio"
+              id="newsletterYes"
+              name="newsletter"
+              value="yes"
+              required
+            />
+            <label for="newsletterYes">Yes</label>
+            <input
+              type="radio"
+              id="newsletterNo"
+              name="newsletter"
+              value="no"
+            />
+            <label for="newsletterNo">No</label>
+
+            <label>
+              <input type="checkbox" name="terms" required />
+              I agree to the terms and conditions.
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Feedback</legend>
+
+            <label for="comments">Additional Comments:</label>
+            <textarea
+              id="comments"
+              name="comments"
+              rows="5"
+              maxlength="500"
+              placeholder="Your message..."
+            ></textarea>
+
+            <label for="readonlyInfo">Information (Read-Only):</label>
+            <input
+              type="text"
+              id="readonlyInfo"
+              value="This field is not editable."
+              readonly
+            />
+          </fieldset>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
