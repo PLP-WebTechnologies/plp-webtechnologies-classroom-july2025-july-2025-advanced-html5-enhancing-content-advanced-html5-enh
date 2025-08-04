@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contacts</a></li>
+        </ul>
+
+    </nav>
+
+    <h1 id="about">Welcome to Stemiot Softwares </h1>
+    <h2>Where code meets quality</h2>
+    <p>We are enthrilled with your determinations and passion in technology, it is the driving power towards building of
+        this we application. <br> Feel welcomed and enjoy your navigation!</p>
+
+        <h2>Our Gallery</h2>
+        <img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg" width="300" height="200" alt="computer_programming">
+
+    <h3>Our audio playlist</h3>
+
+    <audio controls src="https://timheven.com/uploads/Gigy%20Money%20Ft%20Licky%20Tones%20-%20I%20Need%20You.mp3">Company Briefing</audio> <br><br>
+
+    <h3 id="resources">Project execution video tutorial</h3>
+
+    <video controls src="https://videos.pexels.com/video-files/2887463/2887463-hd_1920_1080_25fps.mp4" width="20%" muted autoplay></video>
+
+
+    <h2 id="projects">Our Projects</h2>
+
+    <table border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <th>Project</th>
+            <th>Description</th>
+        </tr>
+
+        <tr>
+            <td>ShieldLog</td>
+            <td>secure digital occurrence book designed for law enforcement to accurately record and preserve
+                statements, ensuring transparency and preventing unauthorized alterations through a strict
+                approval system.</td>
+
+        </tr>
+
+        <tr>
+            <td>Swiftcare Hospital System</td>
+            <td> user-friendly healthcare platform designed to streamline patient management, facilitate quick
+                appointments, and provide easy access to medical resources for improved healthcare experiences.</td>
+        </tr>
+
+        <tr>
+            <td>FiloArts</td>
+            <td>creativity-driven platform that empowers young minds and artists through educational programs,
+                innovative projects, and sustainable art, blending passion with purpose to solve real-world challenges.
+            </td>
+        </tr>
+    </table>
+
+
+    <br><br>
+
+    <form id="contact" action="">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name</label><br>
+            <input type="text" placeholder="enter full name" required autocomplete="on"> <br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" placeholder="abc123@gmail.com" pattern="abc123@gmail.com" autocomplete="on"
+                required><br><br>
+
+            <label for="phone_number">Phone Number</label><br>
+            <input type="number" placeholder="+254 XXX XXX XXX" required max="15" autocomplete="on"><br><br>
+
+            <label for="password">Create Password</label><br>
+            <input type="password" placeholder="Enter a strong password" required minlength="8" maxlength="20"
+                autocomplete="off"><br><br>
+
+            <label for="Confirm_password"> Confirm Password</label> <br>
+            <input type="password" placeholder="re-enter your password" required minlength="8" maxlength="20"
+                autocomplete="off"> <br><br>
+        </fieldset>
+
+
+
+
+        <label for="date">Date</label> <br>
+        <input type="date" required><br><br>
+
+        <label for="userID">User ID</label><br>
+        <input type="text" value="user123" readonly><br><br>
+
+
+
+        <input type="submit">
+
+
+
+    </form>
+
+</body>
+
+</html>
