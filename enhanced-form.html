@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        table, th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            border-collapse: collapse;
+        }
+        fieldset {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            max-width: 400px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1>Peer Learn Project Africa</h1>
+            <p>Peer Learn Project Africa is dedicated to enhancing software development skills through collaborative learning and mentorship.</p>
+        </header>
+
+        <section>
+            <h2>Programming Languages</h2>
+            <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Ruby</li>
+                <li>PHP</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Monthly Learning Hours</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Language</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Python</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Ruby</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>PHP</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Media showcase</h2>
+            <h3>Images</h3>
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image 1" width="400" height="200" />
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section>
+            <h2>Registration Form</h2>
+            <form action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name" minlength="4"/>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email"/>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="1234567890" title="10 digit phone number"/>
+
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">--Select--</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Account Details</legend>
+
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="Choose a username" minlength="5"/>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="********" minlength="8"/>
+
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="********" minlength="8"/>
+
+                    <label>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        I agree to the <a href="#">Terms and Conditions</a>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Feedback</legend>
+
+                    <label for="experience">How was your experience?</label>
+                    <textarea id="experience" name="experience" rows="4" placeholder="Share your thoughts here..."></textarea>
+
+                    <label for="subscribe">
+                        <input type="checkbox" id="subscribe" name="subscribe" checked readonly>
+                        Subscribe to our newsletter
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="submit-btn">Submit</button>
+
+            </form>
+        </section>
+        <footer>
+            <p>&copy; 2025 PLP 2025 Bootcamp. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
