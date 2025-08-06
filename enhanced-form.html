@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Kota menu">
+        <title>Menu</title>
+    </head>
+    <body>
+        <header>
+            <h1>Mnandi TakeAways</h1>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="/">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a></li>
+            </nav>
+        </header>
+        <br/><br/>
+        <table border="1">
+            <thead>
+                <caption><h2>Mnandi Kota Menu</h2></caption>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="images/beef_kota.jpg" type="image" alt="beef kota" width="100" height="100"></td>
+                    <td> Beefy Bacon Kota</td>
+                    <td>Delicious beef patty and bacon with fries</td>
+                    <td>R70</td>
+                </tr>
+                <tr>
+                    <td><img src="images/rib_kota.jpg" type="image" alt="rib kota" width="100" height="100" ></td>
+                    <td>Rib Kota</td>
+                    <td>Double portion succulent ribs with fries and atchar</td>
+                    <td>R70</td>
+                </tr>
+                <tr>
+                    <td><img src="images/munchie_kota.jpg" type="image" alt="munchie kota" width="100" height="100" alt="beef kota"></td>
+                    <td>Munchie Filler</td>
+                    <td>Our infamous munchie filler kota served with fries and mushroom sauce</td>
+                    <td>R80</td>
+                </tr>
+            </tbody>
+        </table><br/>
+
+        <form>
+            <fieldset>
+                <legend>Order Form</legend>
+                <br/>
+
+                <!--customer information-->
+                <label for="fullname">Fullname</label>
+                <br/>
+                <input type="text" name="name" placeholder="First Name" autocomplete="name" required>
+                <br/>
+                <input type="text" name="last_name" placeholder="Last Name">
+                <br/><br/>
+                <label for="contact">Contact Details</label>
+                <br/>
+                <input type="email" name="email" placeholder="Email" autocomplete="email">
+                <br/>
+                <input type="tel" name="phone_number" placeholder="Phone Number" required>
+                <br/><br/>
+
+                <!--customer order-->
+                <label for="order-id">Order ID: </label>
+                <input type="text" value="F01234567" readonly>
+                <br/><br/>
+
+                <!--dropdown list-->
+                <label for="food">Meal:</label>
+                <select id="food" required>
+                    <option value="beefy_bacon">Beefy Bacon Kota</option>
+                    <option value="rib">Rib Kota</option>
+                    <option value="munchie_filler">Munchie Filler Kota</option>
+                </select>
+                <br/>
+
+                <!--unordered list-->
+                <p>Order Type:</p>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <label>
+                            <input type="radio" name="main" value="delivery">Delivery
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="main" value="pick_up">Pick-up
+                        </label>
+                    </li>
+                </ul>
+                
+                <!--delivery details-->
+                <label for="address">Address</label>
+                <br/>
+                <input type="address" placeholder="Street Address" required>
+                <br/>
+                <input type="address" placeholder="Suburb" required>
+                <br/>
+                <input type="address" placeholder="Postal Code" required>
+                <br/><br/>
+
+                <!--special instructions-->
+                <label for="instructions">Special Instructions:</label>
+                <br/>
+                <textarea id="instructions" maxlength="200" placeholder="Max 200 characters"></textarea>
+                <br/><br/>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+        <footer>
+            <p>Thank you for exploring our kitchen.</p>
+            <p>&copy; 2025 Mnandi TakeAways. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
