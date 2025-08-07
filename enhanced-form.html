@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunrise High School - Registration Page</title>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Sunrise High School</h1>
+    <p>Empowering students through knowledge and discipline.</p>
+  </header>
+
+  <main>
+
+
+    <section>
+      <h2>Subjects Offered</h2>
+      <ul>
+        <li>Mathematics</li>
+        <li>Physics</li>
+        <li>Biology</li>
+        <li>English Literature</li>
+        <li>Computer Science</li>
+      </ul>
+
+      <h3>Steps to Register</h3>
+      <ol>
+        <li>Fill out the registration form below.</li>
+        <li>Submit required documents at the school office.</li>
+        <li>Await confirmation email with admission details.</li>
+      </ol>
+    </section>
+
+
+
+    <!--table -->
+    <section>
+      <h2> Class Schedule</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>8:00 AM - 9:00 AM</th>
+            <th>9:00 AM - 10:00 AM</th>
+            <th>10:00 AM - 11:00 AM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Mathematics</td>
+            <td>Physics</td>
+            <td>English</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Biology</td>
+            <td>Mathematics</td>
+            <td>Computer Science</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!--Media -->
+    <section>
+         <h2>Have a look around our school</h2>
+        <video width="640" height="360" controls>
+            <source src="sch.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <audio controls>
+            <source src="song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+
+        <h2>Our School</h2>
+        <img src="sch.webp" alt="Image of Sunrise High School" width="300">
+        <p>This is a glimpse of our school environment. We promote both academic and personal growth.</p>
+    </section>
+
+    <!-- Form -->
+    <section>
+      <h2>Student Registration Form</h2>
+      <form action="/submit" method="post" autocomplete="on">
+        
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="firstName">First Name:</label><br>
+          <input type="text" id="firstName" name="firstName" placeholder="e.g. John" required><br><br>
+
+          <label for="lastName">Last Name:</label><br>
+          <input type="text" id="lastName" name="lastName" placeholder="e.g. Doe" required><br><br>
+
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" placeholder="e.g. john@example.com" required><br><br>
+
+          <label for="dob">Date of Birth:</label><br>
+          <input type="date" id="dob" name="dob" required><br><br>
+
+          <label for="phone">Phone Number:</label><br>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number" required><br><br>
+
+          <label>Gender:</label><br>
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Academic Details</legend>
+
+          <label for="grade">Grade Applying For:</label><br>
+          <select id="grade" name="grade" required>
+            <option value="">Select Grade</option>
+            <option value="8">Grade 8</option>
+            <option value="9">Grade 9</option>
+            <option value="10">Grade 10</option>
+          </select><br><br>
+
+          <label for="subjects">Preferred Subjects:</label><br>
+          <input type="checkbox" id="math" name="subjects" value="Math">
+          <label for="math">Math</label>
+          <input type="checkbox" id="bio" name="subjects" value="Biology">
+          <label for="bio">Biology</label>
+          <input type="checkbox" id="cs" name="subjects" value="Computer Science">
+          <label for="cs">Computer Science</label><br><br>
+
+          <label for="studentID">Student ID:</label><br>
+          <input type="text" id="studentID" name="studentID" value="AUTO12345" readonly><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Security</legend>
+
+          <label for="password">Password:</label><br>
+          <input type="password" id="password" name="password" placeholder="Create a password" minlength="6" required><br><br>
+
+          <label for="confirmPassword">Confirm Password:</label><br>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-type password" minlength="6" required><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Notes</legend>
+          <label for="comments">Why do you want to join Sunrise High School?</label><br>
+          <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Write here..."></textarea>
+        </fieldset>
+
+        <br>
+        <button type="submit">Submit Registration</button>
+        <button type="reset">Reset Form</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sunrise High School. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
