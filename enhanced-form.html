@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+</head>
+<body>
+
+    <!-- Main container -->
+    <div>
+
+        <!-- Header Section -->
+        <header>
+            <h1>Multi-Section Web Page</h1>
+            <p>A demonstration of lists, tables, media, and a native HTML5 form.</p>
+        </header>
+
+        <!-- Lists Section -->
+        <section id="lists">
+            <h2>1. Data in Lists</h2>
+            <div>
+                <div>
+                    <h3>Unordered List</h3>
+                    <ul>
+                        <li>Fresh Organic Apples</li>
+                        <li>Ripe Bananas</li>
+                        <li>Crisp Lettuce</li>
+                        <li>Juicy Tomatoes</li>
+                        <li>Creamy Avocados</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Ordered List</h3>
+                    <ol>
+                        <li>Prepare the ingredients.</li>
+                        <li>Combine all dry components.</li>
+                        <li>Mix in the wet ingredients slowly.</li>
+                        <li>Bake at 350°F for 45 minutes.</li>
+                        <li>Let cool before serving.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table Section -->
+        <section id="tables">
+            <h2>2. Structured Data in a Table</h2>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>In Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Laptop</td>
+                            <td>Electronics</td>
+                            <td>$1,500.00</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Ergonomic Mouse</td>
+                            <td>Accessories</td>
+                            <td>$45.50</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Mechanical Keyboard</td>
+                            <td>Accessories</td>
+                            <td>$120.00</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Media Section -->
+        <section id="media">
+            <h2>3. Media Content</h2>
+            <div>
+                <div>
+                    <h3>Image Example</h3>
+                    <img width="500" height="300"
+                        src="https://images.pexels.com/photos/33112974/pexels-photo-33112974.jpeg"
+                        alt="A placeholder image with a blue background and white text."
+                    >
+                    <p>A responsive placeholder image.</p>
+                </div>
+                <div>
+                    <h3>Video Example</h3>
+                    
+                    <video controls width="500" height="300">
+                        <source src="https://videos.pexels.com/video-files/12374612/12374612-uhd_2560_1440_60fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>A responsive video player.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section id="form">
+            <h2>4.HTML5 Form</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Contact Information</legend>
+
+                    <!-- Full Name -->
+                    <div>
+                        <label for="fullName">Full Name</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Einstein Dipondo"
+                            minlength="3"
+                            maxlength="50"
+                            required
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="einstein@example.com"
+                            required
+                        >
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="0759136851"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            required
+                        >
+                        <p>Format: 123-456-7890</p>
+                    </div>
+
+                    <!-- Password -->
+                    <div>
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            minlength="8"
+                            required
+                        >
+                        <p>Minimum 8 characters</p>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+
+                    <!-- Date of Birth -->
+                    <div>
+                        <label for="dob">Date of Birth</label>
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dob"
+                            required
+                        >
+                    </div>
+
+                    <!-- Number of Guests -->
+                    <div>
+                        <label for="guests">Number of Guests</label>
+                        <input
+                            type="number"
+                            id="guests"
+                            name="guests"
+                            min="1"
+                            max="10"
+                            required
+                        >
+                        <p>Must be between 1 and 10.</p>
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            placeholder="Enter your message here..."
+                        ></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Checkbox -->
+                <div>
+                    <div>
+                        <input
+                            id="terms"
+                            name="terms"
+                            type="checkbox"
+                            required
+                        >
+                    </div>
+                    <div>
+                        <label for="terms">I agree to the <a href="#">terms and conditions</a>.</label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button
+                        type="submit"
+                    >
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+
+</body>
+</html>
