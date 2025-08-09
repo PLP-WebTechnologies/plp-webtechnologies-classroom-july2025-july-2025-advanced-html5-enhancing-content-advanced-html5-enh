@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Forms</title>
+</head>
+<body>
+
+    <header>
+        <h1>Showcase of HTML5 Features</h1>
+        <p>A demonstration of enhanced content and forms.</p>
+    </header>
+
+    <main>
+        <!-- Section for Lists -->
+        <section>
+            <h2>Organized Content: Lists</h2>
+            <article>
+                <h3>Unordered List</h3>
+                <p>A list of project goals:</p>
+                <ul>
+                    <li>Master HTML5 Forms</li>
+                    <li>Understand Semantic Tags</li>
+                    <li>Utilize Native Validation</li>
+                </ul>
+
+                <h3>Ordered List</h3>
+                <p>Steps to complete the assignment:</p>
+                <ol>
+                    <li>Review the objectives.</li>
+                    <li>Structure the HTML file.</li>
+                    <li>Add content sections (lists, tables, media).</li>
+                    <li>Build the HTML form.</li>
+                    <li>Apply validation attributes.</li>
+                </ol>
+            </article>
+        </section>
+
+        <!-- Section for Tables -->
+        <section>
+            <h2>Structured Data: Tables</h2>
+            <p>Here is a sample schedule of web development topics.</p>
+            <table border="1"> <!-- Basic border for visibility without CSS -->
+                <caption>Weekly Learning Schedule</caption>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Topic</th>
+                        <th>Estimated Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML Basics &amp; Structure</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>CSS Fundamentals</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>HTML5 Forms &amp; Validation</td>
+                        <td>3.5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section for Media -->
+        <section>
+            <h2>Embedded Media</h2>
+            <article>
+                <h3>Image</h3>
+                <p>A placeholder image demonstrating the `&lt;img&gt;` tag. The `alt` attribute is crucial for accessibility.</p>
+                <img src="https://via.placeholder.com/600x200" alt="Placeholder image with dimensions 600x200" width="600" height="200">
+            </article>
+            <article>
+                <h3>Audio</h3>
+                <p>An example of embedded audio using the `&lt;audio&gt;` tag with player controls.</p>
+                <audio controls>
+                    <source src="horse.ogg" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+            </article>
+            <article>
+                <h3>Video</h3>
+                <p>An example of embedded video using the `&lt;video&gt;` tag with specified dimensions and player controls.</p>
+                <video width="400" height="300" controls>
+                    <source src="mov_bbb.mp4" type="video/mp4">
+                    <source src="mov_bbb.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>
+            </article>
+        </section>
+
+        <!-- Section for the HTML5 Form -->
+        <section>
+            <h2>Mastering HTML5 Forms</h2>
+            <form action="#-form-submitted" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="fullName">Full Name:</label><br>
+                    <input type="text" id="fullName" name="fullName" placeholder="John Doe" required minlength="3"><br><br>
+
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required><br><br>
+
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+                    <small>Format: 123-456-7890</small><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Details</legend>
+
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required minlength="8" placeholder="Minimum 8 characters"><br><br>
+
+                    <label for="userId">User ID (Read-Only):</label><br>
+                    <input type="text" id="userId" name="userId" value="USER12345" readonly><br><br>
+
+                    <label for="accountType">Account Type:</label><br>
+                    <input type="text" id="accountType" name="accountType" value="Standard" autocomplete="off"><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences &amp; Feedback</legend>
+
+                    <label for="dob">Date of Birth:</label><br>
+                    <input type="date" id="dob" name="dob" required><br><br>
+
+                    <label for="experience">Experience Level (1 to 10):</label><br>
+                    <input type="range" id="experience" name="experience" min="1" max="10" value="5"><br><br>
+
+                    <label for="favcolor">Favorite Color:</label><br>
+                    <input type="color" id="favcolor" name="favcolor" value="#4CAF50"><br><br>
+
+                    <label for="website">Personal Website (Optional):</label><br>
+                    <input type="url" id="website" name="website" placeholder="https://example.com"><br><br>
+
+                    <label for="feedback">Feedback:</label><br>
+                    <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Provide your comments here..." required maxlength="500"></textarea><br><br>
+
+                    <label for="course">Select a Course:</label><br>
+                    <select id="course" name="course" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="html">HTML Fundamentals</option>
+                        <option value="css">Advanced CSS</option>
+                        <option value="js">JavaScript for Beginners</option>
+                    </select><br><br>
+
+                    <p>Receive Newsletter?</p>
+                    <label><input type="radio" name="newsletter" value="yes" checked> Yes</label>
+                    <label><input type="radio" name="newsletter" value="no"> No</label><br><br>
+
+                </fieldset>
+
+                <input type="submit" value="Submit Registration">
+                <input type="reset" value="Clear Form">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Yonatan Berihun's - HTML5 Assignment</p>
+    </footer>
+
+</body>
+</html>
