@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced HTML5 Form — PLP</title>
+    <meta
+      name="description"
+      content="Example page demonstrating lists, tables, media and a complete HTML5 form with native validation."
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Enhanced HTML5 Content & Form</h1>
+      <p>
+        Simple multi-section page demonstrating lists, tables, media, and a
+        complete HTML5 form using native validation.
+      </p>
+    </header>
+    <main>
+      <!-- Content section with lists -->
+      <section aria-labelledby="content-heading">
+        <h2 id="content-heading">Course Highlights</h2>
+
+        <p>Key features you'll learn:</p>
+        <ul>
+          <li>Semantic HTML and accessibility</li>
+          <li>HTML5 form controls and validation</li>
+          <li>Embedding media (images, audio, video)</li>
+        </ul>
+
+        <p>Step-by-step tasks (recommended):</p>
+        <ol>
+          <li>Plan page structure</li>
+          <li>Create content: lists & tables</li>
+          <li>Build form with required validation</li>
+        </ol>
+      </section>
+
+      <!-- Table example -->
+      <section aria-labelledby="table-heading">
+        <h2 id="table-heading">Sample Course Schedule</h2>
+        <table border="1" summary="Course and duration table">
+          <caption>
+            Available short courses
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Course</th>
+              <th scope="col">Format</th>
+              <th scope="col">Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML5 Essentials</td>
+              <td>Online</td>
+              <td>4 weeks</td>
+            </tr>
+            <tr>
+              <td>Forms & Accessibility</td>
+              <td>Workshop</td>
+              <td>2 weeks</td>
+            </tr>
+            <tr>
+              <td>Media & Semantic Content</td>
+              <td>Online</td>
+              <td>1 week</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Media Section -->
+      <section aria-labelledby="media-heading">
+        <h2 id="media-heading">Media Samples</h2>
+
+        <div class="media-grid">
+          <!-- Image Example with description fallback -->
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/31822653/pexels-photo-31822653.jpeg"
+              alt="Rolling green hills with a small river in the foreground and a lone tree on the left hill."
+              width="640"
+              height="360"
+              loading="lazy"
+              aria-describedby="img-desc-1"
+            />
+            <figcaption>
+              Figure 1: Scenic landscape.
+              <a
+                href="https://images.pexels.com/photos/33270805/pexels-photo-33270805.jpeg"
+                download
+                >Download image</a
+              >
+            </figcaption>
+            <!-- Longer description for screen readers and anyone who needs more detail -->
+            <p id="img-desc-1" class="visually-hidden">
+              About my image: I have just embeded an image to my HTML file.
+            </p>
+          </figure>
+
+          <!-- Audio Example with textual fallback and transcript -->
+          <figure>
+            <figcaption>Audio sample — short instrumental loop</figcaption>
+            <audio controls preload="none">
+              <source
+                src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                type="audio/mpeg"
+              />
+              <!-- Fallback presented to users/browsers that do not support audio -->
+              Your browser does not support the audio element. You can
+              <a
+                href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                >download the audio file</a
+              >
+              or read the short transcript below.
+            </audio>
+            <details>
+              <summary>Audio description</summary>
+              <p>00:00–00:30 — Get to hear some gentle soft beats and enjoy.</p>
+            </details>
+          </figure>
+
+          <figure>
+            <figcaption>Video sample — short demo clip</figcaption>
+            <video
+              width="640"
+              height="360"
+              controls
+              preload="metadata"
+              poster="https://images.pexels.com/photos/8286433/pexels-photo-8286433.jpeg"
+            >
+              <source
+                src="https://videos.pexels.com/video-files/26824996/12014123_1080_1920_50fps.mp4"
+                type="video/mp4"
+              />
+              <track
+                kind="captions"
+                srclang="en"
+                label="English captions"
+                src="captions/sample.vtt"
+              />
+              <!-- Fallback text for old/unsupported browsers -->
+              Your browser does not support the video tag. You can
+              <a
+                href="https://videos.pexels.com/video-files/4456305/4456305-uhd_2560_1440_30fps.mp4"
+                >download the video file</a
+              >
+              or read the short description below.
+            </video>
+
+            <details>
+              <summary>Short description</summary>
+              <p>
+                Video: This is a short video I have embeded here to show i can
+                actually include a video to my HTML file
+              </p>
+            </details>
+          </figure>
+        </div>
+      </section>
+
+      <!-- The form -->
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Registration Form</h2>
+
+        <form action="#" method="post" novalidate>
+          <!-- Personal details -->
+          <fieldset>
+            <legend>Personal Details</legend>
+
+            <p>
+              <label for="regid">Registration ID</label><br />
+              <input
+                id="regid"
+                name="regid"
+                type="text"
+                value="REG-2025-001"
+                readonly
+                aria-readonly="true"
+              />
+              <small>System-assigned (readonly)</small>
+            </p>
+
+            <p>
+              <label for="fullname"
+                >Full name <span aria-hidden="true">*</span></label
+              ><br />
+              <input
+                id="fullname"
+                name="fullname"
+                type="text"
+                placeholder="e.g. Jane Doe"
+                required
+                autocomplete="name"
+                minlength="3"
+              />
+            </p>
+
+            <p>
+              <label for="email"
+                >Email address <span aria-hidden="true">*</span></label
+              ><br />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="name@example.com"
+                required
+                autocomplete="email"
+              />
+              <small id="emailHelp">We'll use this to send confirmation.</small>
+            </p>
+
+            <p>
+              <label for="phone"
+                >Phone number <span aria-hidden="true">*</span></label
+              ><br />
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="e.g. 0712345678"
+                required
+                pattern="[0-9]{7,15}"
+                inputmode="tel"
+                autocomplete="tel"
+              />
+              <small>Digits only, 7–15 characters.</small>
+            </p>
+
+            <p>
+              <label for="dob"
+                >Date of birth <span aria-hidden="true">*</span></label
+              ><br />
+              <input id="dob" name="dob" type="date" required />
+            </p>
+          </fieldset>
+
+          <!-- Account details -->
+          <fieldset>
+            <legend>Account</legend>
+
+            <p>
+              <label for="username"
+                >Username <span aria-hidden="true">*</span></label
+              ><br />
+              <input
+                id="username"
+                name="username"
+                type="text"
+                placeholder="choose a username"
+                required
+                minlength="3"
+                autocomplete="username"
+              />
+            </p>
+
+            <p>
+              <label for="password"
+                >Password <span aria-hidden="true">*</span></label
+              ><br />
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="At least 8 characters"
+                required
+                minlength="8"
+                autocomplete="new-password"
+              />
+              <small>Password must be at least 8 characters.</small>
+            </p>
+          </fieldset>
+
+          <!-- Preferences and validations -->
+          <fieldset>
+            <legend>Preferences & Confirmation</legend>
+
+            <p>
+              <label for="age">Age <span aria-hidden="true">*</span></label
+              ><br />
+              <input
+                id="age"
+                name="age"
+                type="number"
+                min="13"
+                max="120"
+                required
+                placeholder="Your age"
+              />
+              <small>Minimum age is 13.</small>
+            </p>
+
+            <p>
+              <label for="website">Personal website (optional)</label><br />
+              <input
+                id="website"
+                name="website"
+                type="url"
+                placeholder="https://example.com"
+                autocomplete="url"
+              />
+            </p>
+
+            <p>
+              <label for="interest"
+                >Course of interest <span aria-hidden="true">*</span></label
+              ><br />
+              <select id="interest" name="interest" required>
+                <option value="">-- Select an option --</option>
+                <option value="html">HTML5 Essentials</option>
+                <option value="forms">Forms & Accessibility</option>
+                <option value="media">Media & Semantic Content</option>
+              </select>
+            </p>
+
+            <p>Gender:</p>
+            <p>
+              <input
+                type="radio"
+                id="gender-f"
+                name="gender"
+                value="female"
+                required
+              />
+              <label for="gender-f">Female</label>
+              <input type="radio" id="gender-m" name="gender" value="male" />
+              <label for="gender-m">Male</label>
+              <input type="radio" id="gender-o" name="gender" value="other" />
+              <label for="gender-o">Other</label>
+            </p>
+
+            <p>
+              <label for="profile">Profile picture (optional)</label><br />
+              <input id="profile" name="profile" type="file" accept="image/*" />
+              <small>Accepted formats: image files</small>
+            </p>
+
+            <p>
+              <label for="notes">Notes (optional)</label><br />
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                maxlength="500"
+                placeholder="Any accessibility needs or notes..."
+              ></textarea>
+            </p>
+
+            <p>
+              <input id="subscribe" name="subscribe" type="checkbox" />
+              <label for="subscribe">Subscribe to updates</label>
+            </p>
+
+            <p>
+              <input id="agree" name="agree" type="checkbox" required />
+              <label for="agree"
+                >I agree to the terms and conditions
+                <span aria-hidden="true">*</span></label
+              >
+            </p>
+          </fieldset>
+
+          <p>
+            <button type="submit">Submit registration</button>
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Created for PLP — Advanced HTML5: Enhancing content & mastering forms.
+      </p>
+    </footer>
+  </body>
+</html>
