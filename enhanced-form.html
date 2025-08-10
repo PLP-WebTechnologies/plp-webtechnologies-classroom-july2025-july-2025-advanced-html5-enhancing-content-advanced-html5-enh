@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HTML5 Form </title>
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1> Profile Form</h1>
+    </header>
+
+    <main>
+      <form id="projectForm" action="#" method="post" enctype="multipart/form-data" novalidate>
+          <fieldset>
+            <legend>Personal & Login</legend>
+              <label for="fullname">Full name <abbr title="required">*</abbr></label>
+              <input id="fullname" name="fullname" type="text" placeholder="Jane Doe"
+                     required autocomplete="name" minlength="2" maxlength="80" aria-required="true" />
+                <br>
+              <label for="email">Email address <abbr title="required">*</abbr></label>
+              <input id="email" name="email" type="email" placeholder="name@example.com"
+                     required autocomplete="email" aria-describedby="emailHelp" />
+                <br>
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" placeholder="+44 20 7123 4567"
+                     autocomplete="tel" pattern="^\+?[0-9\s\-().]{7,20}$" aria-describedby="phoneHelp" />
+
+                <br>
+              <label for="username">Username <abbr title="required">*</abbr></label>
+              <input id="username" name="username" type="text" placeholder="jane_doe92"
+                     required minlength="3" maxlength="30" autocomplete="username" pattern="^[a-zA-Z0-9._-]{3,30}$"
+                     aria-describedby="usernameHelp" />
+
+                <br>
+              <label for="password">Password <abbr title="required">*</abbr></label>
+              <input id="password" name="password" type="password" placeholder="Choose a strong password"
+                     required minlength="8" maxlength="128" autocomplete="new-password" aria-describedby="pwHelp" />
+            <br>
+            <button type="submit">Submit request</button>
+          </fieldset>
+
+      </form>
+        <section>
+            <h2>Unordered List</h2>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+            <h2>Ordered List</h2>
+            <ol>
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+            </ol>
+        </section>
+
+        <section aria-labelledby="mediaHeading" >
+            <figure>
+              <img src="https://free-images.com/tn/030c/coffee_171653.jpg" alt="Placeholder preview image" width="320" height="160">
+              <figcaption class="helper">Image</figcaption>
+            </figure>
+            <figure >
+              <video controls width="320" height="180" aria-label="Promo clip">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                Your browser doesn't support HTML5 video.
+              </video>
+              <figcaption class="helper">Short video </figcaption>
+            </figure>
+          </section>
+
+          <section >
+            <h2>Table</h2>
+            <table id="previewTable" aria-live="polite" summary="Form preview table (updates after submit)">
+                <caption>Project Table</caption>
+              <thead>
+                <tr><th>Field</th><th>Value</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Name</td><td>Sakeeb</td></tr>
+                <tr><td>Project</td><td > Enhanced Form</td></tr>
+                <tr><td>Email</td><td >sakeeb@2u.com</td></tr>
+                <tr><td>Budget</td><td>£3000</td></tr>
+                <tr><td>Services</td><td>Web Development</td></tr>
+              </tbody>
+            </table>
+          </section>
+    </main>
+    </body>
+</html>
