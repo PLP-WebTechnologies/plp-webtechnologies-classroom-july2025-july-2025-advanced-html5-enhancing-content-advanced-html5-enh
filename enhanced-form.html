@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- Declares HTML5 document type -->
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+    <!-- Sets page title -->
+    <title>Enhanced HTML5 Page with Form</title>
+</head>
+<body>
+
+    <!-- Page header -->
+    <header>
+        <h1>My HTML5 Assignment</h1>
+        <p>This page demonstrates lists, tables, media, and a complete HTML5 form.</p>
+    </header>
+
+    <!-- Lists section -->
+    <section>
+        <h2>Sample Lists</h2>
+        
+        <!-- Unordered list -->
+        <h3>Unordered List</h3>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <!-- Ordered list -->
+        <h3>Ordered List</h3>
+        <ol>
+            <li>Plan the layout</li>
+            <li>Write the code</li>
+            <li>Test in browser</li>
+        </ol>
+
+        <!-- Description list -->
+        <h3>Description List</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Markup language for creating web pages.</dd>
+            <dt>CSS</dt>
+            <dd>Stylesheet language for designing web pages.</dd>
+        </dl>
+    </section>
+
+    <!-- Tables section -->
+    <section>
+        <h2>Sample Table</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Language</th>
+                    <th>Use Case</th>
+                    <th>Difficulty</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>Structure</td>
+                    <td>Easy</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Styling</td>
+                    <td>Medium</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Functionality</td>
+                    <td>Hard</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media section -->
+    <section>
+        <h2>Media Showcase</h2>
+
+        <!-- Centered image -->
+        <center>
+            <img src="/croissant-fSuVFIDJwX4-unsplash.jpg" alt="Sample Image" width="300">
+        </center>
+
+        <!-- Centered video -->
+        <center>
+            <video controls width="300">
+                <source src="/WhatsApp Video 2025-08-06 at 08.44.55_877fc7b4.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+        </center>
+
+        <!-- Audio with controls -->
+        <audio controls>
+            <source src="/Toni Braxton - Finally.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
+        </audio>
+    </section>
+
+    <!-- HTML5 form section -->
+    <section>
+        <h2>User Registration Form</h2>
+        <!-- Form element with POST method -->
+        <form action="#" method="post">
+            
+            <!-- Fieldset for personal info -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <!-- Text input -->
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name"><br><br>
+                
+                <!-- Email input -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email"><br><br>
+                
+                <!-- Password input -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="8" placeholder="At least 8 characters"><br><br>
+                
+                <!-- Number input -->
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" max="120" required><br><br>
+                
+                <!-- Date input -->
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br><br>
+            </fieldset>
+
+            <!-- Fieldset for preferences -->
+            <fieldset>
+                <legend>Preferences</legend>
+                
+                <!-- Radio buttons -->
+                <p>Preferred Contact Method:</p>
+                <input type="radio" id="contactEmail" name="contactMethod" value="email" required>
+                <label for="contactEmail">Email</label>
+                <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                <label for="contactPhone">Phone</label><br><br>
+                
+                <!-- Checkbox -->
+                <p>Topics of Interest:</p>
+                <input type="checkbox" id="html" name="interest" value="HTML">
+                <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="interest" value="CSS">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="js" name="interest" value="JavaScript">
+                <label for="js">JavaScript</label><br><br>
+                
+                <!-- Dropdown menu -->
+                <label for="country">Select Your Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">--Select--</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="canada">Canada</option>
+                </select><br><br>
+            </fieldset>
+
+            <!-- Text area -->
+            <label for="comments">Additional Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Enter your comments"></textarea><br><br>
+            
+            <!-- Submit button -->
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My HTML5 Assignment</p>
+    </footer>
+
+</body>
+</html>
