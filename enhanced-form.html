@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Hospital - Post Discharge Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #0066cc;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+
+        video {
+            display: block;
+            margin: 10px auto;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e6f0ff;
+        }
+
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        small {
+            display: block;
+            color: #777;
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
+        input[type="submit"] {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004c99;
+        }
+
+        span.required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sunrise Hospital</h1>
+        <img src="/Web Development/files/hospital-logo.jpg" alt="Sunrise Hospital Logo" width="150">
+        <p style="text-align:center;">We care about your recovery. Sign up today so we can remind you about your next check-up!</p>
+
+        <video controls width="300">
+            <source src="/Web Development/files/welcome-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </header>
+
+    <section>
+        <h2>Our Post-Discharge Services</h2>
+        <ul>
+            <li>Follow-up appointment reminders</li>
+            <li>Home visits for recovery support</li>
+            <li>24/7 online health advice</li>
+            <li>Medication refill reminders</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Patient Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Discharge Date</th>
+                    <th>Next Appointment</th>
+                    <th>Contact Number</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mary Johnson</td>
+                    <td>2025-08-03</td>
+                    <td>2025-09-03</td>
+                    <td>+2348012345678</td>
+                    <td>Needs physiotherapy follow-up</td>
+                </tr>
+                <tr>
+                    <td>James Okoro</td>
+                    <td>2025-08-05</td>
+                    <td>2025-09-10</td>
+                    <td>+2348098765432</td>
+                    <td>Allergic to amoxicillin</td>
+                </tr>
+                 <tr>
+                    <td>Sandra Daniels</td>
+                    <td>2025-07-15</td>
+                    <td>2025-09-22</td>
+                    <td>+2349035878746</td>
+                    <td>On seziure medications</td>
+                </tr>
+                <tr>
+                    <td>Aisha Bello</td>
+                    <td>2025-08-18</td>
+                    <td>2025-10-12</td>
+                    <td>+2348021122334</td>
+                    <td>Recovering from surgery and on antibiotics</td>
+                </tr>
+                    <tr>
+                    <td>Samuel Ade</td>
+                    <td>2025-07-08</td>
+                    <td>2025-09-05</td>
+                    <td>+2348099887766</td>
+                    <td>Diabetic and on a special diet</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+ 
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Contact Details</legend>
+
+            <label for="fullname">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullname" name="fullname"
+                   required minlength="3"
+                   pattern="[A-Za-z\s]+"
+                   placeholder="e.g. Mary Johnson">
+            <small>Enter your first and last name (letters only)</small>
+
+            <label>Gender <span class="required">*</span></label>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male" style="display:inline;font-weight:normal;">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" required>
+            <label for="female" style="display:inline;font-weight:normal;">Female</label>
+
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email"
+                   required placeholder="you@example.com">
+
+            <label for="phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone"
+                   pattern="\+234[0-9]{10}"
+                   required placeholder="+2348012345678">
+            <small>Format: +234 followed by 10 digits</small>
+        </fieldset>
+
+        <fieldset>
+            <legend>Medical Information</legend>
+
+            <label for="discharge">Date of Discharge <span class="required">*</span></label>
+            <input type="date" id="discharge" name="discharge" required>
+
+            <label for="appointment">Next Appointment Date <span class="required">*</span></label>
+            <input type="date" id="appointment" name="appointment" required>
+
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" rows="4"
+                      placeholder="Any allergies, medications, or recovery notes"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Consent</legend>
+            <label>
+                <input type="checkbox" name="consent" required>
+                I agree to be contacted about my appointments and follow-up care.
+            </label>
+        </fieldset>
+
+        <input type="submit" value="Submit Signup">
+    </form>
+
+</body>
+</html>
