@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 - Enhanced HTML Elements (Tourist Destinations)</title>
+</head>
+<body>
+    <!-- Definition List -->
+    <h2>What are tourist attractions?</h2>
+    <dl>
+        <dt>Tourist Attraction</dt>
+        <dd>A place of interest that tourists visit for its cultural, historical, or natural significance.</dd>
+        <dt>World Heritage Site</dt>
+        <dd>A landmark or area recognized by UNESCO for its cultural, historical, or environmental value.</dd>
+    </dl>
+
+    <!-- Nested Lists -->
+    <h2>Famous attractions</h2>
+    <ul>
+        <li>Natural Wonders
+            <ol type="a">
+                <li>Grand Canyon (USA)</li>
+                <li>Victoria Falls (Zambia/Zimbabwe)</li>
+                <li>Great Barrier Reef (Australia)</li>
+            </ol>
+        </li>
+        <li>Man-Made Wonders
+            <ol type="i">
+                <li>Eiffel Tower (France)</li>
+                <li>Great Wall of China (China)</li>
+                <li>Pyramids of Giza (Egypt)</li>
+            </ol>
+        </li>
+    </ul>
+
+    <!-- Image -->
+    <img src="https://images.pexels.com/photos/1582720/pexels-photo-1582720.jpeg" alt="Eiffel Tower in Paris at sunrise" width="300" height="250">
+
+    <!-- Video -->
+    <h2>Video</h2>
+    <video controls width="350" height="200">
+        <source src="https://videos.pexels.com/video-files/27497093/12153609_1440_2560_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>  
+
+    <!-- Table -->
+    <h2>Tables</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Tourist Site</th>
+                <th>Country</th>
+                <th>Main Attraction</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Machu Picchu</td>
+                <td>Peru</td>
+                <td>Ancient Incan City</td>
+            </tr>
+            <tr>
+                <td>Serengeti National Park</td>
+                <td>Tanzania</td>
+                <td>Wildlife Safaris</td>
+            </tr>
+            <tr>
+                <td>Colosseum</td>
+                <td>Italy</td>
+                <td>Ancient Roman Arena</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Form -->
+    <h2>Tour Booking Form</h2>
+    <form action="#" method="post" enctype="multipart/form-data" autocomplete="on">
+        <label for="name">Full Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your full name" required minlength="3">
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required autocomplete="email">
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" name="phone" id="phone" placeholder="+254712345678" pattern="^\+?\d{10,15}$" required>
+        <br><br>
+
+        <label for="passport">Upload ID or Passport:</label>
+        <input type="file" name="passport" id="passport" accept="image/*,.pdf" required>
+        <br><br>
+
+        <label for="bio">Travel Preferences:</label>
+        <textarea name="bio" id="bio" rows="4" cols="50" placeholder="Describe your travel interests" minlength="10" required></textarea>
+        <br><br>
+
+        <label for="destination">Preferred Destination:</label>
+        <select name="destination" id="destination" required>
+            <option value="">--Select Destination--</option>
+            <option value="eiffel">Eiffel Tower (France)</option>
+            <option value="grandcanyon">Grand Canyon (USA)</option>
+            <option value="victoriafalls">Victoria Falls (Zambia/Zimbabwe)</option>
+        </select>
+        <br><br>
+
+        <label for="travel-date">Travel Date:</label>
+        <input type="date" name="travel-date" id="travel-date" required>
+        <br><br>
+
+        <label>Package Type:</label><br>
+        <input type="radio" id="standard" name="package" value="standard" required>
+        <label for="standard">Standard</label>
+        <input type="radio" id="luxury" name="package" value="luxury">
+        <label for="luxury">Luxury</label>
+        <br><br>
+
+        <label>
+            <input type="checkbox" name="newsletter" value="yes"> Subscribe to travel updates
+        </label>
+        <br><br>
+
+        <input type="submit" value="Book Now">
+        <input type="reset" value="Clear Form">
+    </form>
+</body>
+</html>
