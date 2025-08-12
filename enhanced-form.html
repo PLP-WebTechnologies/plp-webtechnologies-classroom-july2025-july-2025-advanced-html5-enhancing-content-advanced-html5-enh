@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced HTML5 Form and Content</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      fieldset {
+        margin-bottom: 15px;
+        padding: 15px;
+      }
+      legend {
+        font-weight: bold;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Web Development Showcase</h1>
+
+      <!-- Section 1: Lists -->
+      <section>
+        <h2>Lists</h2>
+        <h3>Top 3 Coding Best Practices (Ordered List)</h3>
+        <ol>
+          <li>Write clean, readable code.</li>
+          <li>Use version control (e.g., Git).</li>
+          <li>Test early and often.</li>
+        </ol>
+
+        <h3>Common Programming Languages (Unordered List)</h3>
+        <ul>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>Java</li>
+          <li>C#</li>
+        </ul>
+
+        <h3>Tech Definitions (Description List)</h3>
+        <dl>
+          <dt>HTML</dt>
+          <dd>Markup language for structuring web pages.</dd>
+          <dt>CSS</dt>
+          <dd>Stylesheet language for designing web pages.</dd>
+          <dt>JavaScript</dt>
+          <dd>Programming language for dynamic web behavior.</dd>
+        </dl>
+      </section>
+
+      <!-- Section 2: Table -->
+      <section>
+        <h2>Table of Programming Languages</h2>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Language</th>
+              <th scope="col">Year Created</th>
+              <th scope="col">Creator</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Python</td>
+              <td>1991</td>
+              <td>Guido van Rossum</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>1995</td>
+              <td>Brendan Eich</td>
+            </tr>
+            <tr>
+              <td>Java</td>
+              <td>1995</td>
+              <td>James Gosling</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Data compiled from public sources</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <!-- Section 3: Media -->
+      <section>
+        <h2>Media Showcase</h2>
+        <figure>
+          <img src="https://via.placeholder.com/300" alt="Placeholder Image" />
+          <figcaption>Sample image of a placeholder.</figcaption>
+        </figure>
+
+        <audio controls>
+          <source src="sample-audio.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+
+        <video controls width="320">
+          <source src="sample-video.mp4" type="video/mp4" />
+          Your browser does not support the video element.
+        </video>
+      </section>
+
+      <!-- Section 4: HTML5 Form -->
+      <section>
+        <h2>Contact & Registration Form</h2>
+        <form action="/submit" method="post">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="John Doe"
+              required
+              minlength="3"
+              maxlength="50"
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+              autocomplete="email"
+            />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\\d).{8,}"
+              placeholder="At least 8 chars, 1 uppercase, 1 number"
+            />
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required />
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferences</legend>
+            <div>
+              <label
+                ><input
+                  type="radio"
+                  id="basic"
+                  name="plan"
+                  value="basic"
+                  required
+                />
+                Subscription Plan:</label
+              >
+            </div>
+            <div>
+              <label for="basic"
+                ><input type="radio" id="premium" name="plan" value="premium" />
+                Basic</label
+              >
+            </div>
+            <div>
+              <label for="premium"
+                ><input type="radio" id="premium" name="plan" value="premium" />
+                Premium</label
+              >
+            </div>
+
+            <label
+              ><input
+                type="checkbox"
+                id="coding"
+                name="interests"
+                value="coding"
+              />
+              Interests:</label
+            >
+
+            <label for="coding"
+              ><input
+                type="checkbox"
+                id="design"
+                name="interests"
+                value="design"
+              />
+              Coding</label
+            >
+
+            <label for="design">Design</label>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+              <option value="">--Select--</option>
+              <option value="us">United States</option>
+              <option value="uk">United Kingdom</option>
+              <option value="ca">Canada</option>
+              <option value="ng">Nigeria</option>
+            </select>
+
+            <label for="experience">Experience (years):</label>
+            <input
+              type="number"
+              id="experience"
+              name="experience"
+              min="0"
+              max="50"
+              step="1"
+            />
+
+            <label for="bio">Short Bio:</label>
+            <textarea
+              id="bio"
+              name="bio"
+              placeholder="Tell us about yourself"
+              maxlength="200"
+            ></textarea>
+
+            <label for="resume">Upload Resume (PDF only):</label>
+            <input
+              type="file"
+              id="resume"
+              name="resume"
+              accept="application/pdf"
+            />
+          </fieldset>
+
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Web Development Showcase</p>
+    </footer>
+  </body>
+</html>
