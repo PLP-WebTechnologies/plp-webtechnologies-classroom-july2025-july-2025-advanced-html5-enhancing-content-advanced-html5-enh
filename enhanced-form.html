@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced Form Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+  <header>
+    <h1>Enhanced HTML5 Form</h1>
+    <nav>
+      <a href="#info">Info</a> | <a href="#form">Form</a> | <a href="#media">Media</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="info">
+      <article>
+        <h2>About This Page</h2>
+        <p>This page demonstrates an enhanced HTML5 form with semantic layout, validation, and structured content.</p>
+        
+        <h3>Features List</h3>
+        <ul>
+          <li>Well-structured content using semantic tags</li>
+          <li>HTML5 form with validation</li>
+          <li>Tables and lists included</li>
+          <li>Media (image & audio) support</li>
+        </ul>
+        
+        <h3>Example Table</h3>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Type</th>
+              <th>Validation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Email</td>
+              <td>email</td>
+              <td>Required, valid email format</td>
+            </tr>
+            <tr>
+              <td>Password</td>
+              <td>password</td>
+              <td>Required, min length 6</td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td>tel</td>
+              <td>Pattern validation</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+
+    <section id="form">
+      <h2>Registration Form</h2>
+      <form action="#" method="post" autocomplete="on">
+        
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+        <br /><br />
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+        <br /><br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="6" placeholder="At least 6 characters" required>
+        <br /><br />
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <br /><br />
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <br /><br />
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio" name="gender" value="Male">Male
+        <br /><br />
+        
+        <label for="cv">Upload CV:</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.docx">
+        <br /><br />
+    
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Enter your message..."></textarea>
+        <br /><br />
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </section>
+
+    <section id="media">
+      <h2>Media Section</h2>
+      <p>Here is an image and audio sample embedded:</p>
+      <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Help Centre" width="400">
+      <br /><br />
+      <p><strong>Take a breather while you wait and enjoy the sound:</strong></p>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced Form Example.PrincessM Tech. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
