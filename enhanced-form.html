@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enhancing HTML5 with lists, tables, media, and a complete form using native validation.">
+  <title>HTML5 Enhanced Page & Form</title>
+</head>
+<body bgcolor="lightyellow">
+  <!-- Header -->
+  <header>
+    <h1>HTML5 Enhanced Page</h1>
+    <p>This page demonstrates lists, tables, media, and an advanced HTML5 form with validation.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#form">Form</a></li>
+    </ul>
+  </nav>
+
+  <!-- Lists Section -->
+  <section id="lists">
+    <h2>Using Lists</h2>
+    <p>Here’s an example of ordered and unordered lists:</p>
+
+    <h3>Unordered List</h3>
+    <ul>
+      <li>HTML5 Semantic Tags</li>
+      <li>Accessibility Features</li>
+      <li>SEO Basics</li>
+    </ul>
+
+    <h3>Ordered List</h3>
+    <ol>
+      <li>Plan content</li>
+      <li>Write semantic HTML</li>
+      <li>Validate inputs</li>
+    </ol>
+  </section>
+
+  <!-- Tables Section -->
+  <section id="tables">
+    <h2>Using Tables</h2>
+    <p>Example of a table displaying course modules:</p>
+
+    <table border="1" cellpadding="5" cellspacing="0">
+      <caption>Course Modules</caption>
+      <thead>
+        <tr>
+          <th>Module</th>
+          <th>Description</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HTML Basics</td>
+          <td>Introduction to HTML and semantic tags</td>
+          <td>2 weeks</td>
+        </tr>
+        <tr>
+          <td>Accessibility</td>
+          <td>Building inclusive web content</td>
+          <td>1 week</td>
+        </tr>
+        <tr>
+          <td>Forms & Validation</td>
+          <td>Creating user-friendly forms with HTML5</td>
+          <td>2 weeks</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Media Section -->
+  <section id="media">
+    <h2>Embedding Media</h2>
+    <p>Example of an image, audio, and video embedded in HTML5:</p>
+
+    <figure>
+      <img src="https://via.placeholder.com/300x150" alt="Sample placeholder image">
+      <figcaption>Sample Image</figcaption>
+    </figure>
+
+    <audio controls>
+      <source src="sample-audio.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <video width="320" height="240" controls>
+      <source src="sample-video.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+  </section>
+
+  <!-- Form Section -->
+  <section id="form">
+    <h2>HTML5 Form with Validation</h2>
+    <p>Fill out the form below:</p>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required minlength="3"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select...</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Details</legend>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required minlength="5"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="8"><br><br>
+
+        <label for="confirm">Confirm Password:</label>
+        <input type="password" id="confirm" name="confirm" required minlength="8"><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <p>Subscribe to newsletter?</p>
+        <label><input type="radio" name="newsletter" value="yes" required> Yes</label>
+        <label><input type="radio" name="newsletter" value="no"> No</label><br><br>
+
+        <p>Choose your interests:</p>
+        <label><input type="checkbox" name="interests" value="html"> HTML</label>
+        <label><input type="checkbox" name="interests" value="css"> CSS</label>
+        <label><input type="checkbox" name="interests" value="javascript"> JavaScript</label><br><br>
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file"><br><br>
+      </fieldset>
+
+      <!-- Buttons -->
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 WAL MAMOON. All rights reserved.</p>
+    <button type="button" onclick="window.scrollTo(0,0)">Back to Top</button>
+  </footer>
+</body>
+</html>
