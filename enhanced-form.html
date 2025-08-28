@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enhanced HTML5 form with lists, tables, media, and semantic structure demonstrating accessibility and validation.">
+    <meta name="keywords" content="HTML5, form, accessibility, validation, lists, tables, media">
+    <meta name="author" content="Immaculate Munde">
+    <title>Enhanced HTML5 Form</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Enhanced HTML5 Form Example</h1>
+        <p>Demonstrating semantic structure, form inputs, validation, lists, tables, and media.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#form-section">Form</a></li>
+            <li><a href="#list-section">Lists</a></li>
+            <li><a href="#table-section">Table</a></li>
+            <li><a href="#media-section">Media</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+
+        <!-- Form Section -->
+        <section id="form-section">
+            <h2>Sign-Up Form</h2>
+            <form action="#" method="post">
+
+                <!-- Text inputs -->
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required autocomplete="name">
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
+                <br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter a password" required>
+                <br><br>
+
+                <!-- Number input -->
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" max="120" required>
+                <br><br>
+
+                <!-- Radio buttons -->
+                <p>Gender:</p>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+                <br><br>
+
+                <!-- Checkbox -->
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                <label for="subscribe">Subscribe to newsletter</label>
+                <br><br>
+
+                <!-- Dropdown -->
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="uganda">Uganda</option>
+                    <option value="tanzania">Tanzania</option>
+                </select>
+                <br><br>
+
+                <!-- Textarea -->
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Enter your comments" rows="4"></textarea>
+                <br><br>
+
+                <!-- Readonly field -->
+                <label for="ref">Reference Code:</label>
+                <input type="text" id="ref" name="ref" value="REF12345" readonly>
+                <br><br>
+
+                <!-- Submit button -->
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+
+        <!-- List Section -->
+        <section id="list-section">
+            <h2>Sample Lists</h2>
+            <h3>Unordered List</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <h3>Ordered List</h3>
+            <ol>
+                <li>Plan your page</li>
+                <li>Write semantic HTML</li>
+                <li>Validate and test</li>
+            </ol>
+        </section>
+
+        <!-- Table Section -->
+        <section id="table-section">
+            <h2>Sample Table</h2>
+            <table border="1" summary="Sample table showing courses and durations">
+                <caption>Web Development Courses</caption>
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Duration</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML & CSS</td>
+                        <td>4 weeks</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript Basics</td>
+                        <td>6 weeks</td>
+                        <td>Intermediate</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Media Section -->
+        <section id="media-section">
+            <h2>Media Examples</h2>
+            <h3>Image</h3>
+            <img src="https://via.placeholder.com/300x150" alt="Sample placeholder image">
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="sample-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <h3>Video</h3>
+            <video width="320" height="240" controls>
+                <source src="sample-video.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Immaculate Munde. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
