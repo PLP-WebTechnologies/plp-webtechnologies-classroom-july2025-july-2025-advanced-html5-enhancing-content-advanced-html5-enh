@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Section Page with HTML5 Form</title>
+  <style>
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin: 0;
+      background-color: #f7f7f7;
+      line-height: 1.6;
+    }
+    header, main, footer {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      align-items: center;
+      
+    }
+    header {
+      background-color: #655050;
+      color: white;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    section {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    table, th, td {
+      border: 1px solid #bbb;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    audio, video {
+      max-width: 100%;
+      margin-top: 10px;
+    }
+
+  span{
+    color: #007BFF;
+  }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1><span>Welcome to Our Service Page</span></h1>
+  <p>Explore our offerings, pricing, and media highlights before registering.</p>
+</header>
+
+<main>
+ 
+  <section>
+    <h2>Key Benefits</h2>
+    <ul>
+      <li>High-quality AI-powered branding</li>
+      <li>Fast turnaround times</li>
+      <li>Affordable and scalable solutions</li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2>Pricing Plans</h2>
+    <table>
+      <tr>
+        <th>Plan</th>
+        <th>Price</th>
+        <th>Includes</th>
+      </tr>
+      <tr>
+        <td>Basic</td>
+        <td>$10/month</td>
+        <td>Logo + Basic Social Kit</td>
+      </tr>
+      <tr>
+        <td>Pro</td>
+        <td>$20/month</td>
+        <td>Full Brand Identity + Website Mockup</td>
+      </tr>
+    </table>
+  </section>
+
+
+  <section>
+    <h2>Watch Our Introduction</h2>
+    <video controls>
+      <source src="intro.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+
+    <h3>Listen to Our Story</h3>
+    <audio controls>
+      <source src="story.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+
+  <section>
+    <h2>Register Now</h2>
+    <form action="#" method="post" autocomplete="on">
+
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Your full name" required minlength="3">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+254700000000" pattern="^\+?\d{10,15}$" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Details</legend>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Choose a username" required minlength="5">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required minlength="8">
+
+        <label for="plan">Choose Plan:</label>
+        <select id="plan" name="plan" required>
+          <option value="">-- Select a plan --</option>
+          <option value="basic">Basic</option>
+          <option value="pro">Pro</option>
+        </select>
+      </fieldset>
+
+   
+      <fieldset>
+        <legend>Preferences</legend>
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required> Male
+        <input type="radio" id="female" name="gender" value="female"> Female
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" rows="3" placeholder="Tell us a bit about yourself..." required></textarea>
+      </fieldset>
+
+   
+      <fieldset>
+        <legend>Confirmation</legend>
+        <label for="referral">Referral Code:</label>
+        <input type="text" id="referral" name="referral" value="MERCY2025" readonly>
+
+        <label>
+          <input type="checkbox" name="terms" required> I agree to the terms and conditions.
+        </label>
+      </fieldset>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Mercy. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
