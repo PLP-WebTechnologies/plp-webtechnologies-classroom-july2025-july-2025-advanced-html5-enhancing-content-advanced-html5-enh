@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Form - Web Development Showcase</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 3px solid #333;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+      }
+
+      section {
+        margin: 30px 0;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        color: #555;
+        border-left: 4px solid #007acc;
+        padding-left: 15px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      ul,
+      ol {
+        padding-left: 30px;
+      }
+
+      li {
+        margin: 8px 0;
+      }
+
+      .media-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .media-item {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+      }
+
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      audio {
+        max-width: 100%;
+        width: 100%;
+        height: 40px; /* Ensure controls have proper height */
+        border-radius: 5px;
+        outline: none;
+      }
+
+      form {
+        background-color: #fafafa;
+        padding: 30px;
+        border-radius: 8px;
+        border: 2px solid #e1e1e1;
+      }
+
+      fieldset {
+        margin: 20px 0;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+      }
+
+      legend {
+        font-weight: bold;
+        padding: 0 10px;
+        color: #333;
+      }
+
+      label {
+        display: block;
+        margin: 15px 0 5px 0;
+        font-weight: bold;
+        color: #333;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #007acc;
+        box-shadow: 0 0 5px rgba(0, 122, 204, 0.3);
+      }
+
+      input:invalid {
+        border-color: #e74c3c;
+      }
+
+      input:valid {
+        border-color: #27ae60;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .form-col {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .checkbox-group,
+      .radio-group {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      .checkbox-item,
+      .radio-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .checkbox-item input,
+      .radio-item input {
+        width: auto;
+      }
+
+      button {
+        background-color: #007acc;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px 5px;
+      }
+
+      button:hover {
+        background-color: #005a99;
+      }
+
+      button[type="reset"] {
+        background-color: #6c757d;
+      }
+
+      button[type="reset"]:hover {
+        background-color: #545b62;
+      }
+
+      .required {
+        color: #e74c3c;
+      }
+
+      .readonly-field {
+        background-color: #f8f9fa;
+        color: #6c757d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Web Development Showcase</h1>
+        <p>
+          A comprehensive demonstration of HTML5 lists, tables, media, and forms
+        </p>
+      </header>
+
+      <!-- Lists Section -->
+      <section>
+        <h2>Programming Languages & Technologies</h2>
+
+        <h3>Popular Frontend Technologies</h3>
+        <ul>
+          <li>HTML5 - Semantic markup and structure</li>
+          <li>
+            CSS3 - Styling and layout
+            <ul>
+              <li>Flexbox for responsive layouts</li>
+              <li>Grid for complex designs</li>
+              <li>Animations and transitions</li>
+            </ul>
+          </li>
+          <li>
+            JavaScript - Interactive functionality
+            <ul>
+              <li>ES6+ features</li>
+              <li>DOM manipulation</li>
+              <li>Asynchronous programming</li>
+            </ul>
+          </li>
+          <li>React.js - Component-based development</li>
+          <li>Vue.js - Progressive framework</li>
+        </ul>
+
+        <h3>Development Process Steps</h3>
+        <ol>
+          <li>Requirements gathering and analysis</li>
+          <li>Design and wireframing</li>
+          <li>Development environment setup</li>
+          <li>
+            Code implementation
+            <ol type="a">
+              <li>Frontend development</li>
+              <li>Backend development</li>
+              <li>Database design</li>
+            </ol>
+          </li>
+          <li>Testing and quality assurance</li>
+          <li>Deployment and maintenance</li>
+        </ol>
+
+        <h3>Web Development Tools</h3>
+        <dl>
+          <dt>Code Editors</dt>
+          <dd>Visual Studio Code, Sublime Text, Atom</dd>
+          <dt>Version Control</dt>
+          <dd>Git, GitHub, GitLab</dd>
+          <dt>Build Tools</dt>
+          <dd>Webpack, Vite, Parcel</dd>
+          <dt>Testing Frameworks</dt>
+          <dd>Jest, Cypress, Selenium</dd>
+        </dl>
+      </section>
+
+      <!-- Tables Section -->
+      <section>
+        <h2>Technology Comparison Table</h2>
+
+        <table>
+          <caption>
+            Frontend Framework Comparison
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Framework</th>
+              <th scope="col">Release Year</th>
+              <th scope="col">Learning Curve</th>
+              <th scope="col">Performance</th>
+              <th scope="col">Community Size</th>
+              <th scope="col">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">React</th>
+              <td>2013</td>
+              <td>Moderate</td>
+              <td>High</td>
+              <td>Very Large</td>
+              <td>Large applications, SPAs</td>
+            </tr>
+            <tr>
+              <th scope="row">Vue.js</th>
+              <td>2014</td>
+              <td>Easy</td>
+              <td>High</td>
+              <td>Large</td>
+              <td>Rapid prototyping, small to medium apps</td>
+            </tr>
+            <tr>
+              <th scope="row">Angular</th>
+              <td>2010</td>
+              <td>Steep</td>
+              <td>High</td>
+              <td>Large</td>
+              <td>Enterprise applications</td>
+            </tr>
+            <tr>
+              <th scope="row">Svelte</th>
+              <td>2016</td>
+              <td>Easy</td>
+              <td>Very High</td>
+              <td>Growing</td>
+              <td>Performance-critical applications</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="6">
+                <em>Data as of 2024 - frameworks continue to evolve rapidly</em>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <h3>Browser Support Matrix</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Feature</th>
+              <th scope="col">Chrome</th>
+              <th scope="col">Firefox</th>
+              <th scope="col">Safari</th>
+              <th scope="col">Edge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">CSS Grid</th>
+              <td>✅ 57+</td>
+              <td>✅ 52+</td>
+              <td>✅ 10.1+</td>
+              <td>✅ 16+</td>
+            </tr>
+            <tr>
+              <th scope="row">Flexbox</th>
+              <td>✅ 29+</td>
+              <td>✅ 28+</td>
+              <td>✅ 9+</td>
+              <td>✅ 11+</td>
+            </tr>
+            <tr>
+              <th scope="row">Web Components</th>
+              <td>✅ 67+</td>
+              <td>✅ 63+</td>
+              <td>✅ 13.1+</td>
+              <td>✅ 79+</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Media Section -->
+      <section>
+        <h2>Multimedia Showcase</h2>
+
+        <div class="media-container">
+          <div class="media-item">
+            <h3>Sample Image</h3>
+            <img
+              src="https://images.pexels.com/photos/13739807/pexels-photo-13739807.jpeg"
+              alt="Sample image from PEXELS"
+              width="300"
+              height="200"
+            />
+            <p>Responsive image with proper alt text for accessibility</p>
+          </div>
+
+          <div class="media-item">
+            <h3>Audio Player</h3>
+            <audio controls>
+              <source
+                src="http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+
+            <p>HTML5 audio with fallback message</p>
+          </div>
+        </div>
+
+        <div class="media-container">
+          <div class="media-item">
+            <h3>Video Player</h3>
+            <video
+              width="400"
+              height="225"
+              controls
+              
+              src="https://www.pexels.com/download/video/33375274/"
+              poster=""
+            >
+              <source src="#" type="video/mp4" />
+              <p>
+                Your browser does not support the video tag. Please update your
+                browser for the best experience.
+              </p>
+            </video>
+            <p>Video element with poster image and fallback content</p>
+          </div>
+
+          <div class="media-item">
+            <h3>Embedded Content</h3>
+            <iframe
+              width="400"
+              height="225"
+              src="https://example.com"
+              title="Example.com Homepage"
+              style="border: 2px solid #ddd; border-radius: 5px"
+            ></iframe>
+            <p>Safe embedded content with proper title attribute</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Section -->
+      <section>
+        <h2>Comprehensive HTML5 Form</h2>
+
+        <form action="#" method="post" novalidate>
+          <!-- Personal Information -->
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <div class="form-row">
+              <div class="form-col">
+                <label for="firstName"
+                  >First Name <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                  pattern="[A-Za-z\s]+"
+                  placeholder="Enter your first name"
+                  autocomplete="given-name"
+                />
+              </div>
+
+              <div class="form-col">
+                <label for="lastName"
+                  >Last Name <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  required
+                  minlength="2"
+                  maxlength="50"
+                  pattern="[A-Za-z\s]+"
+                  placeholder="Enter your last name"
+                  autocomplete="family-name"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-col">
+                <label for="email"
+                  >Email Address <span class="required">*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="user@example.com"
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-col">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  placeholder="123-456-7890"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-col">
+                <label for="birthDate">Date of Birth</label>
+                <input
+                  type="date"
+                  id="birthDate"
+                  name="birthDate"
+                  min="1900-01-01"
+                  max="2024-12-31"
+                  autocomplete="bday"
+                />
+              </div>
+
+              <div class="form-col">
+                <label for="age">Age</label>
+                <input
+                  type="number"
+                  id="age"
+                  name="age"
+                  min="13"
+                  max="120"
+                  placeholder="Enter your age"
+                />
+              </div>
+            </div>
+
+            <label for="website">Personal Website</label>
+            <input
+              type="url"
+              id="website"
+              name="website"
+              placeholder="https://yourwebsite.com"
+              autocomplete="url"
+            />
+          </fieldset>
+
+          <!-- Address Information -->
+          <fieldset>
+            <legend>Address Information</legend>
+
+            <label for="street">Street Address</label>
+            <input
+              type="text"
+              id="street"
+              name="street"
+              placeholder="123 Main Street"
+              autocomplete="street-address"
+            />
+
+            <div class="form-row">
+              <div class="form-col">
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="City name"
+                  autocomplete="address-level2"
+                />
+              </div>
+
+              <div class="form-col">
+                <label for="state">State/Province</label>
+                <select id="state" name="state" autocomplete="address-level1">
+                  <option value="">Select a state</option>
+                  <option value="AL">Alabama</option>
+                  <option value="CA">California</option>
+                  <option value="FL">Florida</option>
+                  <option value="NY">New York</option>
+                  <option value="TX">Texas</option>
+                  <option value="OTHER">Other</option>
+                </select>
+              </div>
+
+              <div class="form-col">
+                <label for="zipCode">ZIP/Postal Code</label>
+                <input
+                  type="text"
+                  id="zipCode"
+                  name="zipCode"
+                  pattern="[0-9]{5}(-[0-9]{4})?"
+                  placeholder="12345 or 12345-6789"
+                  autocomplete="postal-code"
+                />
+              </div>
+            </div>
+
+            <label for="country">Country</label>
+            <select id="country" name="country" required autocomplete="country">
+              <option value="">Select a country</option>
+              <option value="US">United States</option>
+              <option value="CA">Canada</option>
+              <option value="UK">United Kingdom</option>
+              <option value="AU">Australia</option>
+              <option value="OTHER">Other</option>
+            </select>
+          </fieldset>
+
+          <!-- Professional Information -->
+          <fieldset>
+            <legend>Professional Information</legend>
+
+            <label for="company">Company Name</label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Company Name"
+              autocomplete="organization"
+            />
+
+            <label for="jobTitle">Job Title</label>
+            <input
+              type="text"
+              id="jobTitle"
+              name="jobTitle"
+              placeholder="Software Developer"
+              autocomplete="organization-title"
+            />
+
+            <label for="experience">Years of Experience</label>
+            <input
+              type="range"
+              id="experience"
+              name="experience"
+              min="0"
+              max="50"
+              value="5"
+              oninput="this.nextElementSibling.value = this.value"
+            />
+            <output>5</output> years
+
+            <label for="salary">Expected Salary Range</label>
+            <input
+              type="range"
+              id="salary"
+              name="salary"
+              min="30000"
+              max="200000"
+              step="5000"
+              value="75000"
+              oninput="this.nextElementSibling.value = '$' + parseInt(this.value).toLocaleString()"
+            />
+            <output>$75,000</output>
+
+            <label for="skills">Technical Skills</label>
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="html" name="skills[]" value="html" />
+                <label for="html">HTML5</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="css" name="skills[]" value="css" />
+                <label for="css">CSS3</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="javascript"
+                  name="skills[]"
+                  value="javascript"
+                />
+                <label for="javascript">JavaScript</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="react"
+                  name="skills[]"
+                  value="react"
+                />
+                <label for="react">React</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="nodejs"
+                  name="skills[]"
+                  value="nodejs"
+                />
+                <label for="nodejs">Node.js</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="python"
+                  name="skills[]"
+                  value="python"
+                />
+                <label for="python">Python</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Preferences and Additional Information -->
+          <fieldset>
+            <legend>Preferences and Additional Information</legend>
+
+            <label for="workType"
+              >Preferred Work Type <span class="required">*</span></label
+            >
+            <div class="radio-group">
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  id="remote"
+                  name="workType"
+                  value="remote"
+                  required
+                />
+                <label for="remote">Remote</label>
+              </div>
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  id="hybrid"
+                  name="workType"
+                  value="hybrid"
+                  required
+                />
+                <label for="hybrid">Hybrid</label>
+              </div>
+              <div class="radio-item">
+                <input
+                  type="radio"
+                  id="onsite"
+                  name="workType"
+                  value="onsite"
+                  required
+                />
+                <label for="onsite">On-site</label>
+              </div>
+            </div>
+
+            <label for="availability">Availability Date</label>
+            <input
+              type="datetime-local"
+              id="availability"
+              name="availability"
+              min="2024-01-01T00:00"
+            />
+
+            <label for="portfolio">Portfolio File (PDF only)</label>
+            <input
+              type="file"
+              id="portfolio"
+              name="portfolio"
+              accept=".pdf"
+              multiple
+            />
+
+            <label for="coverLetter">Cover Letter</label>
+            <textarea
+              id="coverLetter"
+              name="coverLetter"
+              rows="6"
+              maxlength="1000"
+              placeholder="Tell us about yourself and why you're interested in this opportunity..."
+              style="resize: vertical"
+            ></textarea>
+
+            <label for="password"
+              >Create Password <span class="required">*</span></label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="8"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+              placeholder="Minimum 8 characters with uppercase, lowercase, number, and special character"
+              autocomplete="new-password"
+            />
+
+            <label for="confirmPassword"
+              >Confirm Password <span class="required">*</span></label
+            >
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+              minlength="8"
+              placeholder="Confirm your password"
+              autocomplete="new-password"
+            />
+
+            <label for="referralCode">Referral Code</label>
+            <input
+              type="text"
+              id="referralCode"
+              name="referralCode"
+              pattern="[A-Z0-9]{6}"
+              placeholder="Enter 6-character code"
+              style="text-transform: uppercase"
+            />
+
+            <label for="userId">User ID (Auto-generated)</label>
+            <input
+              type="text"
+              id="userId"
+              name="userId"
+              value="USER_12345"
+              readonly
+              class="readonly-field"
+            />
+
+            <label for="hiddenField">System Field</label>
+            <input
+              type="hidden"
+              id="hiddenField"
+              name="hiddenField"
+              value="form_version_1.0"
+            />
+
+            <div class="checkbox-item" style="margin-top: 20px">
+              <input
+                type="checkbox"
+                id="newsletter"
+                name="newsletter"
+                value="yes"
+              />
+              <label for="newsletter"
+                >Subscribe to our newsletter for updates and job
+                opportunities</label
+              >
+            </div>
+
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                value="accepted"
+                required
+              />
+              <label for="terms"
+                >I agree to the
+                <a href="#" target="_blank">Terms of Service</a> and
+                <a href="#" target="_blank">Privacy Policy</a>
+                <span class="required">*</span></label
+              >
+            </div>
+          </fieldset>
+
+          <!-- Form Controls -->
+          <div style="text-align: center; margin-top: 30px">
+            <button type="submit">Submit Application</button>
+            <button type="reset">Reset Form</button>
+            <button
+              type="button"
+              onclick="alert('Form validation will occur on submit. This is a demo button.')"
+            >
+              Validate
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <footer
+        style="
+          text-align: center;
+          margin-top: 40px;
+          padding-top: 20px;
+          border-top: 1px solid #ddd;
+        "
+      >
+        <p>
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Web Development Showcase. This page demonstrates HTML5 form
+          capabilities with native validation.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
